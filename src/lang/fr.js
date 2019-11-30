@@ -5,6 +5,7 @@ const lang = {
     bornIn: 'à',
     experience: 'Expérience professionnelle',
     education: 'Formation',
+    certifications: 'Certifications',
     skills: 'Compétences',
     projects: 'Projets',
     contributions: 'Contributions',

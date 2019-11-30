@@ -1,92 +1,130 @@
 /* #*/ export const PERSON = `
 name:
-  first: John
+  first: Jonathan
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I"m just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  last: Cabezas
+about: Je suis dynamique et motivé. Je suis également très curieux et j'adore apprendre en autodidacte.
+       Mes hobbies sont le sport, les échecs, la guitare et tout ce qui touche à l'informatique.
+position: Data Analyst
 
 birth:
-  year: 1990
-  location: New York
+  year: 1997
+  location: Vénissieux
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: New Generation SR, Lyon
+  position: Développeur WEB et Administrateur Système
+  timeperiod: Février 2019 - Août 2019
+  description: 
+  - Création d'images Docker
+  - Développement WEB sous Django
+  - Mise en place de machines virtuelles
+  - Scripts Bash et Python
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: 
+  position: Professeur particulier/Tuteur
+  timeperiod: Janvier 2017 - Maintenant
+  description:
+  - Aide au devoir pour collégiens et lycéens
+  - Tutorat d'informatique en licence/master
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: Pôle Vision Val d'Ouest
+  position: Développeur WEB
+  timeperiod: 2013
+  description: 
+  - Programmation en binôme du site internet du centre ophtalmologique www.polevision.fr
+  url: https://www.polevision.fr
+                
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- degree: Master Data Science
+  school: Université Lyon 1 Claude Bernard
+  timeperiod: Septembre 2018 - Aujourd'hui
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: Licence d'informatique option Mathématiques
+  school: Université Lyon 1 Claude Bernard
+  timeperiod: 2015 - 2018
+  website: https://www.univ-lyon1.fr
+
+- degree: Classe préparatoire Maths-Physique-Sciences de l'ingénieur
+  school: Lycée La Martinière Monplaisir
+  timeperiod: 2014 - 2015
+
+- degree: Baccalauréat S (Mention BIEN avec 15.79/20)
+  school: Lycée La Martinière Monplaisir
+  timeperiod: 2014
 
 # skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
-  level: 80
-- name: ES.Next
-  level: 70
+- name: Linux
+- name: Security
+- name: Bash
 - name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+- name: JavaScript
+- name: C++
+- name: Python
+- name: Perl
+- name: Matlab
+- name: Java
+- name: Scala
+- name: Spark
+- name: Hadoop
+- name: Data Mining
+- name: Bayesian Networks
+- name: SCRUM Method
+
+knowledge: Je parle anglais couramment, et j'ai un bon niveau en espagnol
+                
+certifications:
+- name: LPIC1 Certification
+  timeperiod: 2019
+
+- name: Cisco CCNA 1 Certification
+  timeperiod: 2018
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Jeu Bomberman
+  platform: C++
 
-hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
+- name: Client et serveur SMTP
+  platform: C++
 
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
+- name: Simulateur d'automates à états finis et parseur de RegExp
+  platform: C++
 
-contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: Jeu de course en 2D
+  platform: Java
+
+- name: Mise en place et configuration d'un serveur mail
+  platform: Système
+
+- name: Traitement de données massives et distribuées avec Spark et HDFS
+  platform: Scala
+
+#  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+#  url: https://github.com/salomonelli/best-resume-ever
+
+#hobbies:
+#- name: Video Games
+  #iconClass: fa fa-gamepad
+  #url: https://example.com
+
+#- name: Drawing
+  #iconClass: fa fa-pencil
+  #url: https://example.com
+
+  #contributions:
+  #- name: best-resume-ever
+  #  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
+  #  url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: jonathan@jcabezas.fr
+  phone: (+33)6.27.96.57.71
+  street: 3 Rue Edouard Vaillant
+  city: Villeurbanne, 69100
+  website: www.jcabezas.fr
+  github: JonathanCabezas
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
-lang: en
+lang: fr
 `

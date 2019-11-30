@@ -103,16 +103,21 @@
       <div class="block-helper"></div>
       <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
         <div class="subheadline">{{experience.timeperiod}}</div>
-        <p class="info">
-          {{experience.description}}
-        </p>
+        <ul class="info">
+          <li 
+              v-for="desc in experience.description"
+              class="section-content__text--light">
+              {{ desc }}
+          </li>
+        </ul>
     </div>
     <div class="section-headline">{{ lang.education }}</div>
     <div class="block" v-for="education in person.education" :key="education.degree">
       <div class="block-helper"></div>
       <div class="headline">{{education.degree}}</div>
+      <div class="subheadline">{{education.timeperiod}}</div>
       <p class="info">
-        {{education.timeperiod}}, {{education.description}}
+        {{education.description}}
       </p>
     </div>
   </div>

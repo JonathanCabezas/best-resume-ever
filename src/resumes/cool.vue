@@ -41,6 +41,26 @@
           </div>
         </div>
 
+        <div
+          v-if="person.certifications"
+          class="section">
+          <div class="section-headline">
+            {{ lang.certifications }}
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(cert, index) in person.certifications"
+              class="grid-item"
+              :key="index"
+              :href="cert.url">
+              <span class="squarred-grid-item">
+                {{ cert.name }}
+              </span>
+            </a>
+          </div>
+        </div>
+
         <div class="section">
           <div class="section-headline">
             {{ lang.contact }}
@@ -48,7 +68,11 @@
 
           <div class="section-content section-content--plain">
             <div class="section-link">
-              <i class="section-link__icon material-icons">business</i>{{ person.contact.street }}
+              <i class="section-link__icon material-icons">business</i>
+              <ul class="quicklist">
+                <li>{{person.contact.street}}</li>
+                <li>{{person.contact.city}}</li>
+              </ul>
             </div>
 
             <a
@@ -64,7 +88,7 @@
             <a
               v-if="person.contact.website"
               class="section-link"
-              :href="person.contact.website">
+              :href="contactLinks.website">
               <i class="section-link__icon fa fa-globe"></i>{{ person.contact.website }}
             </a>
 
@@ -112,7 +136,13 @@
               </span>
 
               <div class="section-content__text">{{ experience.timeperiod }}</div>
-              <span class="section-content__text--light">{{ experience.description }}</span>
+              <ul>
+                <li 
+                   v-for="desc in experience.description"
+                   class="section-content__text--light">
+                   {{ desc }}
+                </li>
+              </ul>
             </a>
           </div>
         </div>
@@ -129,8 +159,8 @@
               :key="index"
               :href="education.website">
 
-              <span class="section-content__header"> {{ education.school }} </span>
-              <span class="section-content__subheader">{{ education.degree }}</span>
+              <span class="section-content__header"> {{ education.degree }} </span>
+              <span class="section-content__subheader">{{ education.school }}</span>
               <span class="section-content__text"> {{ education.timeperiod }} </span>
               <span class="section-content__text--light"> {{ education.description }} </span>
             </a>
@@ -195,7 +225,7 @@ export default Vue.component(name, getVueOptions(name));
 <style lang="less" scoped>
 @accent-color: #34495E;
 @banner-color: #42b883;
-@banner-height: 120px;
+@banner-height: 80px;
 @picture-size: 120px;
 @picture-offset: 35px;
 @base-padding: 30px;
@@ -209,6 +239,18 @@ a {
   &:visited {
     color: inherit;
   }
+}
+
+
+.quicklist {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+
+ul {
+  margin: 6px 0 0 0;
+  padding: 0 0 0 30px;
 }
 
 .resume {
@@ -353,6 +395,10 @@ a {
   &--plain {
     padding: 0;
   }
+}
+
+.section-content__item {
+  margin: 0 0 10px 0;
 }
 
 .section-content-grid {
