@@ -34,7 +34,27 @@
               class="grid-item"
               :key="index"
               :href="skill.url">
-              <span class="squarred-grid-item">
+              <span class="squarred-grid-item-left">
+                {{ skill.name }}
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          v-if="person.softs"
+          class="section">
+          <div class="section-headline">
+            {{ lang.softs }}
+          </div>
+
+          <div class="section-content-grid">
+            <a
+              v-for="(skill, index) in person.softs"
+              class="grid-item"
+              :key="index"
+              :href="skill.url">
+              <span class="squarred-grid-item-left">
                 {{ skill.name }}
               </span>
             </a>
@@ -54,7 +74,7 @@
               class="grid-item"
               :key="index"
               :href="cert.url">
-              <span class="squarred-grid-item">
+              <span class="squarred-grid-item-left">
                 {{ cert.name }}
               </span>
             </a>
@@ -176,11 +196,13 @@
 
           <div class="section-content-grid">
             <a v-for="(project, index) in person.projects" :key="index"
-              class="section-content__item-grid"
+              class="grid-item"
               :href="project.url">
-              <span class="section-content__header"> {{ project.name }} </span>
-              <span class="section-content__subheader">{{ project.platform }}</span>
-              <span class="section-content__text"> {{ project.description }} </span>
+              <span class="squarred-grid-item-right">
+                <span class="section-content__header"> {{ project.name }} </span>
+                <span class="section-content__subheader">{{ project.platform }}</span>
+                <span class="section-content__text"> {{ project.description }} </span>
+              </span>
             </a>
           </div>
         </div>
@@ -227,8 +249,8 @@ export default Vue.component(name, getVueOptions(name));
 @banner-color: #42b883;
 @banner-height: 80px;
 @picture-size: 120px;
-@picture-offset: 35px;
-@base-padding: 30px;
+@picture-offset: 70px;
+@base-padding: 20px;
 @left-column-width: 240px;
 
 a {
@@ -262,7 +284,7 @@ ul {
 .picture {
   position: absolute;
   top: @banner-height - @picture-offset;
-  left: @left-column-width + @base-padding * 2 - @picture-size / 2;
+  left: @left-column-width + @base-padding * 2 + @picture-size / 2;
   height: @picture-size;
   width: @picture-size;
   border-radius: 50%;
@@ -412,10 +434,19 @@ ul {
   padding-right: 5px;
 }
 
-.squarred-grid-item {
+.squarred-grid-item-left {
   display: block;
   border: 1px solid white;
   color: white;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.squarred-grid-item-right {
+  font-size: 14px;
+  display: block;
+  border: 1px solid black;
+  color: black;
   margin-top: 5px;
   padding: 5px;
 }

@@ -3,7 +3,7 @@ name:
   first: Jonathan
   middle:
   last: Cabezas
-about: Je suis dynamique et motivé. Je suis également très curieux et j'adore apprendre en autodidacte.
+about: J'ai un bon relationnel, je suis optimiste et ambitieux. Je suis également très curieux et j'adore apprendre en autodidacte.
        Mes hobbies sont le sport, les échecs, la guitare et tout ce qui touche à l'informatique.
 position: Data Analyst
 
@@ -25,8 +25,9 @@ experience:
   position: Professeur particulier/Tuteur
   timeperiod: Janvier 2017 - Maintenant
   description:
-  - Aide au devoir pour collégiens et lycéens
-  - Tutorat d'informatique en licence/master
+  - Aide au devoir pour collégiens et lycéens (Sciences et langues)
+  - Encadrement de TP d'informatique de Licence 1
+  - Cours et TD d'informatique de Master 1
 
 - company: Pôle Vision Val d'Ouest
   position: Développeur WEB
@@ -46,7 +47,7 @@ education:
   timeperiod: 2015 - 2018
   website: https://www.univ-lyon1.fr
 
-- degree: Classe préparatoire Maths-Physique-Sciences de l'ingénieur
+- degree: Classe préparatoire MPSI
   school: Lycée La Martinière Monplaisir
   timeperiod: 2014 - 2015
 
@@ -68,10 +69,16 @@ skills:
 - name: Java
 - name: Scala
 - name: Spark
-- name: Hadoop
+- name: Statistics
+- name: Machine Learning
 - name: Data Mining
-- name: Bayesian Networks
-- name: SCRUM Method
+- name: Méthode Scrum
+
+softs:
+- name: Communication
+- name: Esprit critique
+- name: Prise de décision
+- name: Curiosité
 
 knowledge: Je parle anglais couramment, et j'ai un bon niveau en espagnol
                 
@@ -86,20 +93,20 @@ projects:
 - name: Jeu Bomberman
   platform: C++
 
-- name: Client et serveur SMTP
-  platform: C++
-
-- name: Simulateur d'automates à états finis et parseur de RegExp
+- name: Client/serveur SMTP
   platform: C++
 
 - name: Jeu de course en 2D
   platform: Java
 
+- name: Simulateur d'automates à états finis et parseur de RegExp
+  platform: C++
+
 - name: Mise en place et configuration d'un serveur mail
   platform: Système
 
-- name: Traitement de données massives et distribuées avec Spark et HDFS
-  platform: Scala
+- name: Traitement de données massives et distribuées
+  platform: Spark/HDFS en Scala
 
 #  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
 #  url: https://github.com/salomonelli/best-resume-ever

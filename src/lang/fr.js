@@ -6,7 +6,8 @@ const lang = {
     experience: 'Expérience professionnelle',
     education: 'Formation',
     certifications: 'Certifications',
-    skills: 'Compétences',
+    skills: 'Compétences techniques',
+    softs: 'Compétences transversales',
     projects: 'Projets',
     contributions: 'Contributions',
     about: 'À propos de moi'
