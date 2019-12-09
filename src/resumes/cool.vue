@@ -3,7 +3,7 @@
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">{{ person.position }}</div>
-      <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</div>
+      <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}}</div>
     </div>
 
     <div class="content">
@@ -14,8 +14,9 @@
           </div>
 
           <div class="section-content section-content--plain">
-            {{ person.about }}
-            <br/>
+            <ul>
+              <li v-for="a in person.about">{{ a }}</li>
+            </ul>
             <br/>
             {{ person.knowledge }}
           </div>
@@ -24,20 +25,30 @@
         <div
           v-if="person.skills"
           class="section">
+          
           <div class="section-headline">
             {{ lang.skills }}
           </div>
 
-          <div class="section-content-grid">
-            <a
-              v-for="(skill, index) in person.skills"
-              class="grid-item"
-              :key="index"
-              :href="skill.url">
-              <span class="squarred-grid-item-left">
-                {{ skill.name }}
-              </span>
-            </a>
+          <div
+            v-for="(skills, index1) in person.skills"
+            :key="index1"
+            class="section">
+            <div>
+              {{ skills.category }}
+            </div>
+
+            <div class="section-content-grid">
+                <a
+                  v-for="(skill,index2) in skills.list"
+                  class="grid-item"
+                  :key="index2"
+                  :href="skill.url">
+                  <span class="squarred-grid-item-left">
+                    {{ skill.name }}
+                  </span>
+                </a>
+            </div>
           </div>
         </div>
 
@@ -247,7 +258,7 @@ export default Vue.component(name, getVueOptions(name));
 <style lang="less" scoped>
 @accent-color: #34495E;
 @banner-color: #42b883;
-@banner-height: 80px;
+@banner-height: 90px;
 @picture-size: 120px;
 @picture-offset: 70px;
 @base-padding: 20px;
@@ -311,6 +322,8 @@ ul {
 
   &__position {
     font-size: 16px;
+    margin: 5px 0 0 0;
+    width: @left-column-width + @base-padding * 2;
   }
 
   &__location {
