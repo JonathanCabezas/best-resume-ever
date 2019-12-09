@@ -2,7 +2,11 @@
   <div class="resume">
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
-      <div class="banner__position">{{ person.position }}</div>
+      <div class="banner__position">
+        <p v-for="p in person.position">
+          {{ p }}
+        </p>
+      </div>
       <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}}</div>
     </div>
 
@@ -15,10 +19,8 @@
 
           <div class="section-content section-content--plain">
             <ul>
-              <li v-for="a in person.about">{{ a }}</li>
+              <li class="about" v-for="a in person.about">{{ a }}</li>
             </ul>
-            <br/>
-            {{ person.knowledge }}
           </div>
         </div>
 
@@ -286,6 +288,10 @@ ul {
   padding: 0 0 0 30px;
 }
 
+.about {
+  margin: 5px 0 0 0;
+}
+
 .resume {
   position: relative;
   font-family:'Roboto' !important;
@@ -317,13 +323,17 @@ ul {
   color: white;
 
   &__fullname {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   &__position {
     font-size: 16px;
-    margin: 5px 0 0 0;
-    width: @left-column-width + @base-padding * 2;
+    width: @left-column-width + @base-padding * 3;
+  }
+
+  &__position p {
+    margin: 4px 0 0 0;
+    padding: 0;
   }
 
   &__location {

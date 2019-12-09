@@ -74,6 +74,7 @@ const convert = async () => {
             });
             await browser.close();
         });
+        // copy chosen cv to Dropbox fullDirectoryPath + chosenCV + '.pdf'
     } catch (err) {
         throw new Error(err);
     }

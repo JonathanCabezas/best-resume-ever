@@ -7,7 +7,11 @@ about:
 - "Age: 22 ans"
 - "Qualités: Bon relationnel, polyvalent et curieux"
 - "Hobbies: Escalade, échecs, guitare et tout ce qui touche à l'informatique et aux sciences"
-position: Je cherche un stage de 6 mois en Data Science à compter du 17 Février 2020
+- "Anglais courant"
+- "Bon niveau en espagnol"
+position: 
+- Etudiant en M2 Data Science Informatique
+- Je cherche un stage de 6 mois à compter du 17 Février 2020
 
 birth:
   #year: 1997
@@ -99,8 +103,6 @@ skills:
 #- name: Prise de décision
 #- name: Curiosité
 
-knowledge: Je parle anglais couramment, et j'ai un bon niveau en espagnol
-                
 certifications:
 - name: TOEIC
   timeperiod: 2019
