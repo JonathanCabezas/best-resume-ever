@@ -4,14 +4,13 @@ name:
   middle:
   last: Cabezas
 about: 
-- "Age: 22 ans"
+- "Age: 23 ans"
 - "Qualités: Bon relationnel, polyvalent et curieux"
 - "Hobbies: Escalade, échecs, guitare et tout ce qui touche à l'informatique et aux sciences"
 - "Anglais courant"
 - "Bon niveau en espagnol"
 position: 
-- Etudiant en M2 Data Science Informatique
-- Je cherche un stage de 6 mois à compter du 17 Février 2020
+- Tuteur d'Informatique
 
 birth:
   #year: 1997
@@ -29,7 +28,7 @@ experience:
 
 - company: 
   position: Tuteur
-  timeperiod: Décembre 2018 - Maintenant
+  timeperiod: Décembre 2018 - Février 2020
   description:
   - Encadrement de TP d'informatique de Licence 1
   - Cours et TD d'informatique de Master 1
@@ -49,9 +48,15 @@ experience:
                 
 
 education:
+- degree: Master Image Développement et Technologie 3D
+  school: Université Lyon 1 Claude Bernard
+  timeperiod: Septembre 2020 - Maintenant
+  website: https://www.univ-lyon1.fr
+
 - degree: Master Data Science
   school: Université Lyon 1 Claude Bernard
-  timeperiod: Septembre 2018 - Aujourd'hui
+  timeperiod: Septembre 2018 - Septembre 2020
+  website: https://www.univ-lyon1.fr
 
 - degree: Licence d'informatique option Mathématiques
   school: Université Lyon 1 Claude Bernard
@@ -114,9 +119,6 @@ certifications:
   timeperiod: 2018
 
 projects:
-- name: Recherche de motifs fréquents dans des bases de transactions
-  platform: Python
-
 - name: Algorithmes de clustering appliqués à différents jeux de données
   platform: Python + Scikit-learn
 
@@ -161,7 +163,7 @@ projects:
 contact:
   email: jonathan@jcabezas.fr
   phone: (+33)6.27.96.57.71
-  street: 3 Rue Edouard Vaillant
+  street: 53C Rue Château Gaillard
   city: Villeurbanne, 69100
   website: www.jcabezas.fr
   github: JonathanCabezas

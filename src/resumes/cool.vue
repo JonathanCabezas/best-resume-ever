@@ -466,7 +466,7 @@ ul {
 }
 
 .squarred-grid-item-right {
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   border: 1px solid black;
   color: black;
