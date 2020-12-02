@@ -60,6 +60,17 @@ const convert = async () => {
                 args: ['--no-sandbox']
             });
             const page = await browser.newPage();
+
+            // Errors from Puppeteer Browser to debug
+            page
+                .on('console', message =>
+                console.log(`${message.type().substr(0, 3).toUpperCase()} ${message.text()}`))
+                .on('pageerror', ({ message }) => console.log(message))
+                .on('response', response =>
+                console.log(`${response.status()} ${response.url()}`))
+                .on('requestfailed', request =>
+                console.log(`${request.failure().errorText} ${request.url()}`));
+
             await page.goto(`http://localhost:${config.dev.port}/#/resume/` + dir.name, {
                 waitUntil: 'networkidle2'
             });
