@@ -55,6 +55,7 @@ const convert = async () => {
         const fullDirectoryPath = path.join(__dirname, '../pdf/');
         const directories = getResumesFromDirectories();
         directories.forEach(async (dir) => {
+            console.log("Generating " + dir.name + '.pdf');
             const browser = await puppeteer.launch({
                 args: ['--no-sandbox']
             });
@@ -82,7 +83,16 @@ const convert = async () => {
 };
 
 const getResumesFromDirectories = () => {
+    if (process.argv[2] !== undefined) {
+        const fileName = process.argv[2];
+        return [{
+            path: fileName,
+            name: fileName
+        }];
+    }
+
     const directories = getDirectories();
+
     return directories
     .map(dir => {
         const fileName = dir.replace('.vue', '');

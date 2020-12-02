@@ -6,13 +6,30 @@ import {
     terms
 } from '../terms';
 
+//function highlightText(obj) {
+//    for (const property in obj) {
+//        if (obj.hasOwnProperty(property)) {
+//            if (typeof obj[property] == 'object') {
+//                highlightText(obj[property]);
+//            } else if (typeof obj[property] == 'string') {
+//                obj[property] = obj[property].replaceAll(/\*(.*?)\*/g, '<span class="highlightedText">$1</span>');
+//            }
+//        }
+//    }
+//
+//    return obj;
+//}
+
 // Called by templates to decrease redundancy
 function getVueOptions (name) {
     const opt = {
         name: name,
         data () {
+            const personTmp = yaml.load(PERSON);
+            //const person = highlightText(personTmp);
+
             return {
-                person: yaml.load(PERSON),
+                person: personTmp,
                 terms: terms,
             };
         },

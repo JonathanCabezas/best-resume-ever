@@ -4,13 +4,12 @@ name:
   middle:
   last: Cabezas
 about: 
-- "Age: 23 ans"
-- "Qualités: Bon relationnel, polyvalent et curieux"
-- "Hobbies: Escalade, échecs, guitare et tout ce qui touche à l'informatique et aux sciences"
-- "Anglais courant"
-- "Bon niveau en espagnol"
+- "Agé de *23 ans*, les gens me décrivent *ouvert d'esprit*, *force de proposition*, *méticuleux* et *porté par la passion*"
+- "*Anglais courant* (990/990 au TOEIC), *bon niveau en espagnol* et *notions de japonais*"
+- "Hobbies: *Escalade*, *échecs*, *guitare*, *réalité virtuelle*, et tout type de *sciences*"
 position: 
-- Tuteur d'Informatique
+- "Cherche stage de fin d'études de 5 à 6 mois dans l'image, le développement et la 3D.
+Disponible à partir du 1er Mars 2021"
 
 birth:
   #year: 1997
@@ -22,7 +21,7 @@ experience:
   timeperiod: Février 2019 - Août 2019
   description: 
   - Création d'images Docker
-  - Développement Web sous Django
+  - Développement Web full stack sous Django, API RESTful
   - Mise en place de machines virtuelles
   - Scripts Bash et Python
 
@@ -30,8 +29,8 @@ experience:
   position: Tuteur
   timeperiod: Décembre 2018 - Février 2020
   description:
-  - Encadrement de TP d'informatique de Licence 1
-  - Cours et TD d'informatique de Master 1
+  - Encadrement de TP d'informatique de Licence 1 (sous contrat)
+  - Cours et TD d'informatique de Master 1 (bénévolat associatif)
 
 - company: 
   position: Professeur particulier
@@ -66,6 +65,7 @@ education:
 - degree: Classe préparatoire MPSI
   school: Lycée La Martinière Monplaisir
   timeperiod: 2014 - 2015
+  website: http://www.lamartinieremonplaisir.org
 
 #- degree: Baccalauréat S (Mention BIEN avec 15.79/20)
 #  school: Lycée La Martinière Monplaisir
@@ -73,34 +73,43 @@ education:
 
 # skill level goes 0 to 100
 skills:
+  - category: Infographie
+    list:
+    - name: Bézier/Spline
+    - name: Rendu direct/différé
+    - name: Rasterization
+    - name: Raytracing
+    - name: Unity
+    - name: Maillage 3D
+    - name: Fourier Transform
+
   - category: Data Science
     list:
-    - name: Statistics
     - name: Machine Learning
-    - name: Data Mining
-    - name: Combinatoire
+    - name: Statistiques
+    - name: SQL
+    - name: NoSQL
+    - name: Spark/HDFS
     - name: D3.js
-    - name: Spark
+    - name: Data Mining
+    - name: Graphes
+    - name: ANOVA
 
-  - category: Système
+  - category: Complémentaire
     list:
     - name: Linux
-    - name: Security
+    - name: WebDev
+    - name: Vue.js
+    - name: Sécurité
     - name: Bash
     - name: Docker
-  
-  - category: Développement
-    list:
-    - name: Méthode Scrum
-    - name: Java
-    - name: JavaScript
-    - name: C++
-    - name: Python
-    - name: Perl
-    - name: Matlab
-    - name: Scala
-    - name: R
-    - name: SAS
+    - name: Kubernetes
+    - name: Git
+    - name: Valgrind
+    - name: Méthode Agile (SCRUM)
+    - name: Tests unitaires
+    - name: Vim
+    - name: API RESTful
 
 #softs:
 #- name: Communication
@@ -119,30 +128,27 @@ certifications:
   timeperiod: 2018
 
 projects:
-- name: Algorithmes de clustering appliqués à différents jeux de données
-  platform: Python + Scikit-learn
+- name: "*Transfert de style* d'une peinture à une image avec *Pytorch*"
 
-- name: Traitement de données massives et distribuées
-  platform: Spark/HDFS en Scala
+- name: "*Reconnaissance* de piéton"
 
-- name: Visualisation de données
-  platform: D3.js
+- name: "*Génération de textures* infinies"
 
-- name: Client/serveur SMTP
-  platform: C++
+- name: "*Génération de terrain procédurale* sur Shadertoy"
 
-- name: Jeu de course 2D
-  platform: Java et JavaFX
+- name: "*Extraction de texte* d'un document avec *OpenCV*"
 
-- name: Jeu Bomberman
-  platform: C++ et SDL2
+- name: "Génération de panorama à partir de photos sous *Matlab*"
 
-- name: Mise en place et configuration d'un serveur mail (Postfix)
-  platform: Système
+- name: "*Lancer de rayons* sur *Compute Shader* avec *OpenGL*"
 
-- name: Simulateur d'automates à états finis et parseur de RegExp
-  platform: C++
+- name: "*Triangulation* et manipulation de *maillages 2D et 3D* en *C++*"
 
+- name: "Développement d'algorithmes de *compression* audio et vidéo"
+  
+- name: "*Animation* d'un tissu à partir des lois de Newton en *C++*"
+
+#  timeperiod: February 2016
 #  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
 #  url: https://github.com/salomonelli/best-resume-ever
 
@@ -165,8 +171,9 @@ contact:
   phone: (+33)6.27.96.57.71
   street: 53C Rue Château Gaillard
   city: Villeurbanne, 69100
-  website: www.jcabezas.fr
+  #website: www.jcabezas.fr
   github: JonathanCabezas
+  linkedin: jonathan-cabezas-23b264150
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
 lang: fr
 `

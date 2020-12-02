@@ -3,8 +3,7 @@
     <div class="banner">
       <div class="banner__fullname">{{ person.name.first }} {{ person.name.middle }} {{ person.name.last }}</div>
       <div class="banner__position">
-        <p v-for="p in person.position">
-          {{ p }}
+        <p v-for="p in person.position" v-html="p">
         </p>
       </div>
       <div v-if="person.birth" class="banner__location">{{ lang.born }} {{person.birth.year}}</div>
@@ -12,17 +11,61 @@
 
     <div class="content">
       <div class="content__left">
+
+
         <div class="section">
           <div class="section-headline">
-            {{ lang.about }}
+            {{ lang.contact }}
           </div>
 
-          <div class="section-content section-content--plain">
-            <ul>
-              <li class="about" v-for="a in person.about">{{ a }}</li>
-            </ul>
+          <div class="section-content section-content--plain section-content--contact section-content__left">
+            <div class="section-link">
+              <i class="section-link__icon material-icons">business</i>
+              <ul class="quicklist">
+                <li>{{person.contact.street}}</li>
+                <li>{{person.contact.city}}</li>
+              </ul>
+            </div>
+
+            <a
+              class="section-link link"
+              :href="contactLinks.email">
+              <i class="section-link__icon material-icons">mail</i>{{ person.contact.email }}
+            </a>
+
+            <div class="section-link">
+              <i class="section-link__icon material-icons">phone</i>{{ person.contact.phone }}
+            </div>
+
+            <a
+              v-if="person.contact.website"
+              class="section-link link"
+              :href="person.contact.website">
+              <i class="section-link__icon fa fa-globe"></i>{{ person.contact.website }}
+            </a>
+
+            <a
+              v-if="person.contact.linkedin"
+              class="section-link link"
+              :href="contactLinks.linkedin">
+              <i class="section-link__icon fa fa-linkedin"></i>{{ person.contact.linkedin }}
+            </a>
+
+            <a
+              v-if="person.contact.github"
+              class="section-link link"
+              :href="contactLinks.github">
+              <i class="section-link__icon fa fa-github"></i>{{ person.contact.github }}
+            </a>
+
+            <a
+              v-if="person.contact.medium"
+              class="section-link link"
+              :href="contactLinks.medium">
+              <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
+            </a>
           </div>
-        </div>
+
 
         <div
           v-if="person.skills"
@@ -66,6 +109,7 @@
               v-for="(skill, index) in person.softs"
               class="grid-item"
               :key="index"
+              :class="{ link: skill.url !== undefined}"
               :href="skill.url">
               <span class="squarred-grid-item-left">
                 {{ skill.name }}
@@ -96,60 +140,41 @@
 
         <div class="section">
           <div class="section-headline">
-            {{ lang.contact }}
+            {{ lang.about }}
           </div>
 
-          <div class="section-content section-content--plain">
-            <div class="section-link">
-              <i class="section-link__icon material-icons">business</i>
-              <ul class="quicklist">
-                <li>{{person.contact.street}}</li>
-                <li>{{person.contact.city}}</li>
-              </ul>
-            </div>
-
-            <a
-              class="section-link"
-              :href="contactLinks.email">
-              <i class="section-link__icon material-icons">mail</i>{{ person.contact.email }}
-            </a>
-
-            <div class="section-link">
-              <i class="section-link__icon material-icons">phone</i>{{ person.contact.phone }}
-            </div>
-
-            <a
-              v-if="person.contact.website"
-              class="section-link"
-              :href="contactLinks.website">
-              <i class="section-link__icon fa fa-globe"></i>{{ person.contact.website }}
-            </a>
-
-            <a
-              v-if="person.contact.linkedin"
-              class="section-link"
-              :href="contactLinks.linkedin">
-              <i class="section-link__icon fa fa-linkedin"></i>{{ person.contact.linkedin }}
-            </a>
-
-            <a
-              v-if="person.contact.github"
-              class="section-link"
-              :href="contactLinks.github">
-              <i class="section-link__icon fa fa-github"></i>{{ person.contact.github }}
-            </a>
-
-            <a
-              v-if="person.contact.medium"
-              class="section-link"
-              :href="contactLinks.medium">
-              <i class="section-link__icon fa fa-medium"></i>{{ person.contact.medium }}
-            </a>
+          <div class="section-content section-content--plain section-content__left">
+            <ul>
+              <li class="about" v-for="a in person.about" v-html="a"></li>
+            </ul>
           </div>
+        </div>
+
         </div>
       </div>
 
       <div class="content__right">
+
+        <div class="section">
+          <div class="section-headline">
+            <i class="section-headline__icon material-icons">school</i>{{ lang.education }}
+          </div>
+
+          <div class="section-content">
+            <a
+              v-for="(education, index) in person.education"
+              class="section-content__item"
+              :key="index"
+              :class="{ link: education.website !== undefined}"
+              :href="education.website">
+
+              <span class="section-content__header"> {{ education.degree }} </span>
+              <span class="section-content__subheader">{{ education.school }}</span>
+              <span class="section-content__text"> {{ education.timeperiod }} </span>
+              <span class="section-content__text--light"> {{ education.description }} </span>
+            </a>
+          </div>
+
         <div class="section">
           <div class="section-headline">
             <i class="section-headline__icon material-icons">work</i>{{ lang.experience }}
@@ -160,6 +185,7 @@
               v-for="(experience, index) in person.experience"
               :key="index"
               class="section-content__item"
+              :class="{ link: experience.website !== undefined}"
               :href="experience.website">
 
               <span class="section-content__header">{{ experience.position }}</span>
@@ -179,25 +205,6 @@
             </a>
           </div>
         </div>
-
-        <div class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">school</i>{{ lang.education }}
-          </div>
-
-          <div class="section-content">
-            <a
-              v-for="(education, index) in person.education"
-              class="section-content__item"
-              :key="index"
-              :href="education.website">
-
-              <span class="section-content__header"> {{ education.degree }} </span>
-              <span class="section-content__subheader">{{ education.school }}</span>
-              <span class="section-content__text"> {{ education.timeperiod }} </span>
-              <span class="section-content__text--light"> {{ education.description }} </span>
-            </a>
-          </div>
         </div>
 
         <div
@@ -207,12 +214,13 @@
             <i class="section-headline__icon material-icons">code</i>{{ lang.projects }}
           </div>
 
-          <div class="section-content-grid">
+          <div class="section-content-grid section-content-grid--projects">
             <a v-for="(project, index) in person.projects" :key="index"
               class="grid-item"
+              :class="{ link: project.url !== undefined}"
               :href="project.url">
               <span class="squarred-grid-item-right">
-                <span class="section-content__header"> {{ project.name }} </span>
+                <span class="section-content__header" v-html="project.name"></span>
                 <span class="section-content__subheader">{{ project.platform }}</span>
                 <span class="section-content__text"> {{ project.description }} </span>
               </span>
@@ -232,6 +240,7 @@
               v-for="(contribution, index) in person.contributions"
               class="section-content__item-grid"
               :key="index"
+              :class="{ link: contribution.url !== undefined}"
               :href="contribution.url">
               <span class="section-content__header"> {{ contribution.name }} </span>
               <span class="section-content__text"> {{ contribution.description }} </span>
@@ -257,16 +266,24 @@ const name = 'cool';
 export default Vue.component(name, getVueOptions(name));
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @accent-color: #34495E;
 @banner-color: #42b883;
+@highlight-color: @banner-color;
+@text-light-color: white;
+@text-dark-color: #A5ADB4;
 @banner-height: 90px;
 @picture-size: 120px;
-@picture-offset: 70px;
+@picture-bottom-offset: 70px;
+@picture-left-offset: 140;
 @base-padding: 20px;
-@left-column-width: 240px;
+@left-column-width: 260px;
 
-a {
+.highlightedText {
+    color:@highlight-color;
+}
+
+.link {
   color: inherit;
   cursor: pointer;
   text-decoration-line: none;
@@ -279,7 +296,7 @@ a {
 
 .quicklist {
   margin:0;
-  padding:0;
+  padding:0 !important;
   list-style-type:none;
 }
 
@@ -288,8 +305,12 @@ ul {
   padding: 0 0 0 30px;
 }
 
+.content__left ul {
+  padding: 0 0 0 15px;
+}
+
 .about {
-  margin: 5px 0 0 0;
+  margin: 6px 0 0 0;
 }
 
 .resume {
@@ -300,8 +321,8 @@ ul {
 
 .picture {
   position: absolute;
-  top: @banner-height - @picture-offset;
-  left: @left-column-width + @base-padding * 2 + @picture-size / 2;
+  top: @banner-height - @picture-bottom-offset;
+  left: @left-column-width + @base-padding * 2 + @picture-size / 2 + @picture-left-offset;
   height: @picture-size;
   width: @picture-size;
   border-radius: 50%;
@@ -315,12 +336,7 @@ ul {
   height: @banner-height;
   padding: @base-padding;
   background-color: @banner-color;
-  /*
-    background-image: url('../../resume/banner.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  */
-  color: white;
+  color: @text-light-color;
 
   &__fullname {
     font-size: 30px;
@@ -328,11 +344,11 @@ ul {
 
   &__position {
     font-size: 16px;
-    width: @left-column-width + @base-padding * 3;
+    width: @left-column-width + @base-padding * 2 + @picture-size / 4 + @picture-left-offset;
   }
 
   &__position p {
-    margin: 4px 0 0 0;
+    margin: 10px 0 0 0;
     padding: 0;
   }
 
@@ -350,25 +366,32 @@ ul {
   &__right {
     height: 100%;
     padding: @base-padding;
+    padding-top: @base-padding / 3;
   }
 
   &__left {
     width: @left-column-width;
-    color: rgba(255, 255, 255, 0.59);
+    color: @text-dark-color;
     background-color: @accent-color;
 
     .section-headline {
-      color: white;
+      color: @text-light-color;
+      font-size: 18px;
     }
   }
 
   &__right {
     flex: 1;
+    background-color: @text-light-color;
   }
 }
 
 .section {
-  margin: 20px 0;
+  margin: 18px 0;
+}
+
+.content__left > .section .section:nth-of-type(2) {
+  margin: 10px 0;
 }
 
 .section-link,
@@ -377,8 +400,8 @@ ul {
   align-items: center;
   color: @accent-color;
   display: inline-block;
-  font-size: 1.2em;
-  margin: 8px 0;
+  font-size: 18px;
+  margin: 0 0 5px;
 
   &__icon {
     margin-right: 8px;
@@ -388,10 +411,10 @@ ul {
 
 .section-link {
   font-size: 1.1em;
-  color: rgba(255, 255, 255, 0.59) !important;
+  color: @text-dark-color;
 
   &__icon {
-    color: white;
+    color: @text-light-color;
   }
 }
 
@@ -399,6 +422,10 @@ ul {
   margin-top: 5px;
   padding-left: 32px;
   font-size: 14px;
+
+  &__left {
+    margin-top: 10px;
+  }
 
   &__item {
     display: block;
@@ -414,6 +441,7 @@ ul {
   &__subheader {
     display: block;
     font-weight: 400;
+    margin-bottom: 2px;
   }
 
   &__plain,
@@ -440,10 +468,14 @@ ul {
   &--plain {
     padding: 0;
   }
+
+  &--contact {
+    margin-left: 10px;
+  }
 }
 
 .section-content__item {
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
 }
 
 .section-content-grid {
@@ -451,6 +483,11 @@ ul {
   flex-wrap: wrap;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 10px;
+
+  &--projects {
+    margin-left: 28px;
+  }
 }
 
 .grid-item {
@@ -459,8 +496,8 @@ ul {
 
 .squarred-grid-item-left {
   display: block;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid @text-light-color;
+  color: @text-light-color;
   margin-top: 5px;
   padding: 5px;
 }
@@ -470,7 +507,7 @@ ul {
   display: block;
   border: 1px solid black;
   color: black;
-  margin-top: 5px;
+  margin-top: 6px;
   padding: 5px;
 }
 </style>
