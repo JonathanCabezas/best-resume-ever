@@ -1,98 +1,179 @@
 /* #*/ export const PERSON = `
-# Any fields left unchanged, please delete so your resume is fully yours!
-
 name:
-  first: John
+  first: Jonathan
   middle:
-  last: Doe
-about: Hi, my name is John Doe. I'm just about the most boring type of person you could
-       possibly imagine. I like collecting leaves from the tree in my back yard and documenting
-       each time I eat a peanut that is non-uniform. I am not a robot. Please hire me.
-position: Software Developer
+  last: Cabezas
+about: 
+- "Agé de *23 ans*, les gens me décrivent *ouvert d'esprit*, *force de proposition*, *méticuleux* et *porté par la passion*"
+- "*Anglais courant* (990/990 au TOEIC), *bon niveau en espagnol* et *notions de japonais*"
+- "Hobbies: *Escalade*, *échecs*, *guitare*, *réalité virtuelle*, et tout type de *sciences*"
+position: 
+- "Cherche stage de fin d'études de 5 à 6 mois dans l'image, le développement et la 3D.
+Disponible à partir du 1er Mars 2021"
 
 birth:
-  year: 1990
-  location: New York
-
-# you may add more experiences by duplicating the template
+  #year: 1997
+  #location: Vénissieux
 
 experience:
-- company: Company A
-  position: Developer
-  timeperiod: since January 2016
-  description: Programming and watching cute cat videos.
-  website: https://example.com
+- company: New Generation SR, Lyon
+  position: Développeur Web et Administrateur Système
+  timeperiod: Février 2019 - Août 2019
+  description: 
+  - Création d'images Docker
+  - Développement Web full stack sous Django, API RESTful
+  - Mise en place de machines virtuelles
+  - Scripts Bash et Python
 
-- company: Company B
-  position: Frontend Developer
-  timeperiod: January 2015 - December 2015
-  description: Fulfillment of extremely important tasks.
+- company: 
+  position: Tuteur
+  timeperiod: Décembre 2018 - Février 2020
+  description:
+  - Encadrement de TP d'informatique de Licence 1 (sous contrat)
+  - Cours et TD d'informatique de Master 1 (bénévolat associatif)
 
-- company: Company C
-  position: Trainee
-  timeperiod: March 2014 - December 2014
-  description: Making coffee and baking cookies.
+- company: 
+  position: Professeur particulier
+  timeperiod: Juin 2016 - Septembre 2019
+  description:
+  - Aide au devoir et cours pour collégiens et lycéens (Sciences et langues)
+
+#- company: Pôle Vision Val d'Ouest
+#  position: Développeur WEB
+#  timeperiod: 2013
+#  description: 
+#  - Programmation en binôme du site internet du centre ophtalmologique www.polevision.fr
+#  url: https://www.polevision.fr
+                
 
 education:
-- degree: Master of Arts
-  timeperiod: March 2012 - December 2013
-  description: Major in Hacking and Computer Penetration, University A, New York, USA.
-  website: https://example.com
+- degree: Master Image Développement et Technologie 3D
+  school: Université Lyon 1 Claude Bernard
+  timeperiod: Septembre 2020 - Maintenant
+  website: https://www.univ-lyon1.fr
 
-- degree: Bachelor of Science
-  timeperiod: March 2009 - December 2011
-  description: Major in Engineering, University B, Los Angeles, USA.
+- degree: Master Data Science
+  school: Université Lyon 1 Claude Bernard
+  timeperiod: Septembre 2018 - Septembre 2020
+  website: https://www.univ-lyon1.fr
 
-# skill level goes from 0 to 100
+- degree: Licence d'informatique option Mathématiques
+  school: Université Lyon 1 Claude Bernard
+  timeperiod: 2015 - 2018
+  website: https://www.univ-lyon1.fr
+
+- degree: Classe préparatoire MPSI
+  school: Lycée La Martinière Monplaisir
+  timeperiod: 2014 - 2015
+  website: http://www.lamartinieremonplaisir.org
+
+#- degree: Baccalauréat S (Mention BIEN avec 15.79/20)
+#  school: Lycée La Martinière Monplaisir
+#  timeperiod: 2014
+
+# skill level goes 0 to 100
 skills:
-- name: HTML5
-  level: 99
-- name: CSS3
-  level: 95
-- name: JavaScript
-  level: 97
-- name: Node.js
-  level: 93
-- name: Angular 2
-  level: 60
-- name: TypeScript
-  level: 80
-- name: ES.Next
-  level: 70
-- name: Docker
-  level: 99
-knowledge: Also proficient in Adobe Photoshop and Illustrator, grew up bilingual
-  (English and Klingon).
+  - category: Infographie
+    list:
+    - name: Bézier/Spline
+    - name: Rendu direct/différé
+    - name: Rasterization
+    - name: Raytracing
+    - name: Unity
+    - name: Maillage 3D
+    - name: Fourier Transform
+
+  - category: Data Science
+    list:
+    - name: Machine Learning
+    - name: Statistiques
+    - name: SQL
+    - name: NoSQL
+    - name: Spark/HDFS
+    - name: D3.js
+    - name: Data Mining
+    - name: Graphes
+    - name: ANOVA
+
+  - category: Complémentaire
+    list:
+    - name: Linux
+    - name: WebDev
+    - name: Vue.js
+    - name: Sécurité
+    - name: Bash
+    - name: Docker
+    - name: Kubernetes
+    - name: Git
+    - name: Valgrind
+    - name: Méthode Agile (SCRUM)
+    - name: Tests unitaires
+    - name: Vim
+    - name: API RESTful
+
+#softs:
+#- name: Communication
+#- name: Esprit critique
+#- name: Prise de décision
+#- name: Curiosité
+
+certifications:
+- name: TOEIC
+  timeperiod: 2019
+  
+- name: LPIC-1
+  timeperiod: 2019
+
+- name: Cisco CCNA 1
+  timeperiod: 2018
 
 projects:
-- name: best-resume-ever
-  platform: Vue
-  timeperiod: February 2016
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: "*Transfert de style* d'une peinture à une image avec *Pytorch*"
 
-# optional, not all resume templates have hobbies included
-hobbies:
-- name: Video Games
-  iconClass: fa fa-gamepad
-  url: https://example.com
+- name: "*Reconnaissance* de piéton"
 
-- name: Drawing
-  iconClass: fa fa-pencil
-  url: https://example.com
+- name: "*Génération de textures* infinies"
 
-contributions:
-- name: best-resume-ever
-  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
-  url: https://github.com/salomonelli/best-resume-ever
+- name: "*Génération de terrain procédurale* sur Shadertoy"
+
+- name: "*Extraction de texte* d'un document avec *OpenCV*"
+
+- name: "Génération de panorama à partir de photos sous *Matlab*"
+
+- name: "*Lancer de rayons* sur *Compute Shader* avec *OpenGL*"
+
+- name: "*Triangulation* et manipulation de *maillages 2D et 3D* en *C++*"
+
+- name: "Développement d'algorithmes de *compression* audio et vidéo"
+  
+- name: "*Animation* d'un tissu à partir des lois de Newton en *C++*"
+
+#  timeperiod: February 2016
+#  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
+#  url: https://github.com/salomonelli/best-resume-ever
+
+#hobbies:
+#- name: Video Games
+  #iconClass: fa fa-gamepad
+  #url: https://example.com
+
+#- name: Drawing
+  #iconClass: fa fa-pencil
+  #url: https://example.com
+
+  #contributions:
+  #- name: best-resume-ever
+  #  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
+  #  url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: john.doe@email.com
-  phone: 0123 456789
-  street: 1234 Broadway
-  city: New York
-  website: johndoe.com
-  github: johnyD
+  email: jonathan@jcabezas.fr
+  phone: (+33)6.27.96.57.71
+  street: 53C Rue Château Gaillard
+  city: Villeurbanne, 69100
+  #website: www.jcabezas.fr
+  github: JonathanCabezas
+  linkedin: jonathan-cabezas-23b264150
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
-lang: en
+lang: fr
 `
