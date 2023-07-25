@@ -156,6 +156,37 @@
       <div class="content__right">
 
         <div class="section">
+          <div class="section">
+            <div class="section-headline">
+              <i class="section-headline__icon material-icons">work</i>{{ lang.experience }}
+            </div>
+
+            <div class="section-content">
+              <a
+                v-for="(experience, index) in person.experience"
+                :key="index"
+                class="section-content__item"
+                :class="{ link: experience.website !== undefined}"
+                :href="experience.website">
+
+                <span class="section-content__header">{{ experience.position }}</span>
+                <span class="section-content__subheader">
+                  {{ experience.company }}
+                  <span class="section-content__plain">{{ experience.location }}</span>
+                </span>
+
+                <div class="section-content__text">{{ experience.timeperiod }}</div>
+                <ul>
+                  <li 
+                    v-for="desc in experience.description"
+                    class="section-content__text--light">
+                    {{ desc }}
+                  </li>
+                </ul>
+              </a>
+            </div>
+          </div>
+
           <div class="section-headline">
             <i class="section-headline__icon material-icons">school</i>{{ lang.education }}
           </div>
@@ -174,37 +205,6 @@
               <span class="section-content__text--light"> {{ education.description }} </span>
             </a>
           </div>
-
-        <div class="section">
-          <div class="section-headline">
-            <i class="section-headline__icon material-icons">work</i>{{ lang.experience }}
-          </div>
-
-          <div class="section-content">
-            <a
-              v-for="(experience, index) in person.experience"
-              :key="index"
-              class="section-content__item"
-              :class="{ link: experience.website !== undefined}"
-              :href="experience.website">
-
-              <span class="section-content__header">{{ experience.position }}</span>
-              <span class="section-content__subheader">
-                {{ experience.company }}
-                <span class="section-content__plain">{{ experience.location }}</span>
-              </span>
-
-              <div class="section-content__text">{{ experience.timeperiod }}</div>
-              <ul>
-                <li 
-                   v-for="desc in experience.description"
-                   class="section-content__text--light">
-                   {{ desc }}
-                </li>
-              </ul>
-            </a>
-          </div>
-        </div>
         </div>
 
         <div
@@ -271,13 +271,14 @@ export default Vue.component(name, getVueOptions(name));
 @banner-color: #42b883;
 @highlight-color: @banner-color;
 @text-light-color: white;
-@text-dark-color: #A5ADB4;
+@text-dark-color: rgba(255, 255, 255, 0.59);
 @banner-height: 90px;
-@picture-size: 120px;
-@picture-bottom-offset: 70px;
-@picture-left-offset: 140;
+@picture-border-color: white;
+@picture-size: 160px;
+@picture-top-offset: 20px;
+@picture-right-offset: 20px;
 @base-padding: 20px;
-@left-column-width: 260px;
+@left-column-width: 240px;
 
 .highlightedText {
     color:@highlight-color;
@@ -321,12 +322,12 @@ ul {
 
 .picture {
   position: absolute;
-  top: @banner-height - @picture-bottom-offset;
-  left: @left-column-width + @base-padding * 2 + @picture-size / 2 + @picture-left-offset;
+  top: @picture-top-offset;
+  right: @picture-right-offset;
   height: @picture-size;
   width: @picture-size;
-  border-radius: 50%;
-  border: 5px solid @accent-color;
+  border-radius: 2%;
+  border: 2px solid @picture-border-color;
   content: url('../../resume/id.jpg');
   z-index: 2;
 }
@@ -339,17 +340,11 @@ ul {
   color: @text-light-color;
 
   &__fullname {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   &__position {
-    font-size: 16px;
-    width: @left-column-width + @base-padding * 2 + @picture-size / 4 + @picture-left-offset;
-  }
-
-  &__position p {
-    margin: 10px 0 0 0;
-    padding: 0;
+    font-size: 20px;
   }
 
   &__location {
@@ -361,6 +356,7 @@ ul {
   display: flex;
   width: 100%;
   height: 100%;
+  box-shadow: 10px 5px 10px black;
 
   &__left,
   &__right {
@@ -390,6 +386,7 @@ ul {
   margin: 18px 0;
 }
 
+/* Lower margins for the first section */
 .content__left > .section .section:nth-of-type(2) {
   margin: 10px 0;
 }
@@ -418,9 +415,17 @@ ul {
   }
 }
 
+/*
+ Grille droite, plus de marge à gauche
+ Image à remettre en carré blanc en haut à droite
+ Image plus grande
+ Trop de marge à droite (bullet point sur une ligne, notamment responsable de cours etc)
+ Remettre section de gauche en 240px
+ */
+
 .section-content {
   margin-top: 5px;
-  padding-left: 32px;
+  padding-left: 16px;
   font-size: 14px;
 
   &__left {
@@ -429,7 +434,7 @@ ul {
 
   &__item {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 
   &__header {
@@ -470,20 +475,14 @@ ul {
   }
 
   &--contact {
-    margin-left: 10px;
+    margin-left: 5px;
   }
-}
-
-.section-content__item {
-  margin: 0 0 8px 0;
 }
 
 .section-content-grid {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  margin: 5px 0 5px 5px;
 
   &--projects {
     margin-left: 28px;

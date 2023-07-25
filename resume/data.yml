@@ -2,70 +2,74 @@
 name:
   first: Jonathan
   middle:
-  last: Cabezas
+  last: Cabezas | 26 ans
 about: 
-- "Agé de *23 ans*, les gens me décrivent *ouvert d'esprit*, *force de proposition*, *méticuleux* et *porté par la passion*"
-- "*Anglais courant* (990/990 au TOEIC), *bon niveau en espagnol* et *notions de japonais*"
-- "Hobbies: *Escalade*, *échecs*, *guitare*, *réalité virtuelle*, et tout type de *sciences*"
+- "*Passionné*, *rigoureux* et *force de proposition*"
+- "*Anglais courant* (990/990 au TOEIC), *niveau espagnol avancé*"
+- "Centres d'intérêt: *Echecs*, *Musique*, *Volley*, *Escalade*, *Tennis*"
 position: 
-- "Cherche stage de fin d'études de 5 à 6 mois dans l'image, le développement et la 3D.
-Disponible à partir du 1er Mars 2021"
+- "Développeur logiciel, WEB ou DevOps."
 
 birth:
   #year: 1997
   #location: Vénissieux
 
 experience:
+
+- company: Clearsy, Lyon
+  position: Ingénieur Etude & Développement
+  timeperiod: Février 2022 - Juin 2023
+  description: 
+  - Développement C++/Qt sur un gros projet (> 20 personnes)
+  #- Ecriture et revue de spécifications
+  #- Tests unitaires/d'intégration
+  #- Relecture de code
+  - Suivi des performances et optimisation
+  - Collaboration inter-équipe en anglais
+  - Compréhension du besoin client
+
+- company: Ecoles privées/Ecoles d'ingénieur diverses
+  position: Enseignant Java, Réseau et Cybersécurité
+  timeperiod: Septembre 2021 - Mars 2023
+  description: 
+  - Dispensation de cours en amphi (promo >100 étudiants)
+  - Encadrement de TD et TP
+  - Responsable de la création des supports de cours, de TP et d'évaluations
+
+- company: Laboratoire LIRIS
+  position: Stage de recherche en réalité virtuelle
+  timeperiod: Mars 2021 - Août 2021
+  description:
+  - Développement en C# d'un lecteur/enregistreur de scènes Unity adapté à la VR
+  - Responsable de la planification et du déroulement d'expériences en VR
+  - Synthèse et présentation d'articles scientifiques
+
+- company:
+  position: Tutorat bénévole
+  timeperiod: Septembre 2019 - Septembre 2020
+  description:
+  #- Cours et TD d'informatique à destination des Master 1 d'Informatique
+
 - company: New Generation SR, Lyon
-  position: Développeur Web et Administrateur Système
+  position: Développeur Web Full Stack | Administrateur Système
   timeperiod: Février 2019 - Août 2019
   description: 
   - Création d'images Docker
-  - Développement Web full stack sous Django, API RESTful
-  - Mise en place de machines virtuelles
-  - Scripts Bash et Python
-
-- company: 
-  position: Tuteur
-  timeperiod: Décembre 2018 - Février 2020
-  description:
-  - Encadrement de TP d'informatique de Licence 1 (sous contrat)
-  - Cours et TD d'informatique de Master 1 (bénévolat associatif)
-
-- company: 
-  position: Professeur particulier
-  timeperiod: Juin 2016 - Septembre 2019
-  description:
-  - Aide au devoir et cours pour collégiens et lycéens (Sciences et langues)
-
-#- company: Pôle Vision Val d'Ouest
-#  position: Développeur WEB
-#  timeperiod: 2013
-#  description: 
-#  - Programmation en binôme du site internet du centre ophtalmologique www.polevision.fr
-#  url: https://www.polevision.fr
-                
+  - Développement Web full stack sous Django
+  - Développement d'une API RESTful
+  #- Mise en place de machines virtuelles
+  #- Scripts Bash et Python    
 
 education:
 - degree: Master Image Développement et Technologie 3D
   school: Université Lyon 1 Claude Bernard
-  timeperiod: Septembre 2020 - Maintenant
+  timeperiod: Septembre 2020 - Septembre 2021
   website: https://www.univ-lyon1.fr
 
 - degree: Master Data Science
   school: Université Lyon 1 Claude Bernard
-  timeperiod: Septembre 2018 - Septembre 2020
+  timeperiod: Septembre 2015 - Septembre 2020
   website: https://www.univ-lyon1.fr
-
-- degree: Licence d'informatique option Mathématiques
-  school: Université Lyon 1 Claude Bernard
-  timeperiod: 2015 - 2018
-  website: https://www.univ-lyon1.fr
-
-- degree: Classe préparatoire MPSI
-  school: Lycée La Martinière Monplaisir
-  timeperiod: 2014 - 2015
-  website: http://www.lamartinieremonplaisir.org
 
 #- degree: Baccalauréat S (Mention BIEN avec 15.79/20)
 #  school: Lycée La Martinière Monplaisir
@@ -73,43 +77,61 @@ education:
 
 # skill level goes 0 to 100
 skills:
-  - category: Infographie
-    list:
-    - name: Bézier/Spline
-    - name: Rendu direct/différé
-    - name: Rasterization
-    - name: Raytracing
-    - name: Unity
-    - name: Maillage 3D
-    - name: Fourier Transform
 
-  - category: Data Science
+  - category: Web
     list:
-    - name: Machine Learning
-    - name: Statistiques
-    - name: SQL
-    - name: NoSQL
-    - name: Spark/HDFS
-    - name: D3.js
-    - name: Data Mining
-    - name: Graphes
-    - name: ANOVA
+    - name: HTML 5
+    - name: CSS 3
+    - name: Javascript
+    - name: JQuery
+    - name: Bootstrap
+    - name: Vue.js
+    - name: Java Spring
+    - name: Django
+    - name: DOM
+    - name: Extensions pour navigateur
+
+  - category: DevOps/Système
+    list:
+    - name: Windows
+    - name: Linux
+    - name: Réseau
+    - name: Cybersécurité
+    - name: Kubernetes
+    - name: Docker
+    - name: Bash
+    - name: Python
 
   - category: Complémentaire
     list:
-    - name: Linux
-    - name: WebDev
-    - name: Vue.js
-    - name: Sécurité
-    - name: Bash
-    - name: Docker
-    - name: Kubernetes
     - name: Git
-    - name: Valgrind
-    - name: Méthode Agile (SCRUM)
+    - name: C++
+    - name: Qt
+    - name: Optimisation
+    - name: Méthode Agile
     - name: Tests unitaires
-    - name: Vim
-    - name: API RESTful
+
+  # - category: Infographie
+  #   list:
+  #   - name: Bézier/Spline
+  #   - name: Rendu direct/différé
+  #   - name: Rasterization
+  #   - name: Raytracing
+  #   - name: Unity
+  #   - name: Maillage 3D
+  #   - name: Fourier Transform
+
+  # - category: Data Science
+  #   list:
+  #   - name: Machine Learning
+  #   - name: Statistiques
+  #   - name: SQL
+  #   - name: NoSQL
+  #   - name: Spark/HDFS
+  #   - name: D3.js
+  #   - name: Data Mining
+  #   - name: Graphes
+  #   - name: ANOVA
 
 #softs:
 #- name: Communication
@@ -128,25 +150,13 @@ certifications:
   timeperiod: 2018
 
 projects:
-- name: "*Transfert de style* d'une peinture à une image avec *Pytorch*"
+- name: "*Automatisation* de commandes sur boutiques en ligne"
 
-- name: "*Reconnaissance* de piéton"
+- name: "Génération de rapports *Excel* en *Javascript*"
 
-- name: "*Génération de textures* infinies"
+- name: "*Automatisation* de requêtes *SQL* lourdes en *Python*"
 
-- name: "*Génération de terrain procédurale* sur Shadertoy"
-
-- name: "*Extraction de texte* d'un document avec *OpenCV*"
-
-- name: "Génération de panorama à partir de photos sous *Matlab*"
-
-- name: "*Lancer de rayons* sur *Compute Shader* avec *OpenGL*"
-
-- name: "*Triangulation* et manipulation de *maillages 2D et 3D* en *C++*"
-
-- name: "Développement d'algorithmes de *compression* audio et vidéo"
-  
-- name: "*Animation* d'un tissu à partir des lois de Newton en *C++*"
+- name: "Envoi *automatique* de mails en *Python*"
 
 #  timeperiod: February 2016
 #  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
@@ -167,10 +177,10 @@ projects:
   #  url: https://github.com/salomonelli/best-resume-ever
 
 contact:
-  email: jonathan@jcabezas.fr
-  phone: (+33)6.27.96.57.71
-  street: 53C Rue Château Gaillard
-  city: Villeurbanne, 69100
+  email: jonathan.c@bezas.fr
+  phone: 06 27 96 57 71
+  street: 8A Rue Victor Huen
+  city: Colmar, 68000
   #website: www.jcabezas.fr
   github: JonathanCabezas
   linkedin: jonathan-cabezas-23b264150
