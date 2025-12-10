@@ -272,9 +272,9 @@ export default Vue.component(name, getVueOptions(name));
 @highlight-color: @banner-color;
 @text-light-color: white;
 @text-dark-color: rgba(255, 255, 255, 0.59);
-@banner-height: 90px;
+@banner-height: 60px;
 @picture-border-color: white;
-@picture-size: 160px;
+@picture-size: 120px;
 @picture-top-offset: 20px;
 @picture-right-offset: 20px;
 @base-padding: 20px;
@@ -340,11 +340,14 @@ ul {
   color: @text-light-color;
 
   &__fullname {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   &__position {
     font-size: 20px;
+    p {
+      margin: 8px 4px;
+    }
   }
 
   &__location {

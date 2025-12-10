@@ -8,7 +8,7 @@ const lang = {
     certifications: 'Certifications',
     skills: 'Compétences techniques',
     softs: 'Compétences transversales',
-    projects: 'Projets récents (< 4 mois)',
+    projects: 'Projets récents (< 6 mois)',
     contributions: 'Contributions',
     about: 'À propos de moi'
 };

@@ -2,13 +2,13 @@
 name:
   first: Jonathan
   middle:
-  last: Cabezas | 26 ans
+  last: Cabezas | 28 ans
 about: 
-- "*Passionné*, *rigoureux* et *force de proposition*"
-- "*Anglais courant* (990/990 au TOEIC), *niveau espagnol avancé*"
-- "Centres d'intérêt: *Echecs*, *Musique*, *Volley*, *Escalade*, *Tennis*"
+- "*Anglais courant* (TOEIC 990/990), *espagnol avancé*"
+- "Centres d'intérêt: *Echecs*, *Clarinette*, *Cuisine*, *Escalade*"
+- "*Passionné* par le développement web moderne et les bonnes pratiques"
 position: 
-- "Développeur logiciel, WEB ou DevOps."
+- "Développeur Web Full Stack"
 
 birth:
   #year: 1997
@@ -16,60 +16,65 @@ birth:
 
 experience:
 
+- company: Freelance, Colmar
+  position: Développeur Web Full Stack (Angular / Express / PostgreSQL)
+  timeperiod: Décembre 2023 - Décembre 2025 (2 ans)
+  description: 
+  - Conception architecture (marketplace + intranet de gestion/préparation commandes).
+  - Co-rédaction du cahier des charges avec le Product Owner.
+  - Développement Full Stack des deux applications.
+  - IA générative pour accélérer le dev (scaffolding, tests, revue de code).
+  - CI/CD et déploiement automatique.
+
 - company: Clearsy, Lyon
-  position: Ingénieur Etude & Développement
-  timeperiod: Février 2022 - Juin 2023
+  position: Ingénieur Etude & Développement (C++ / Qt)
+  timeperiod: Février 2022 - Juin 2023 (1 ans 5 mois)
   description: 
-  - Développement C++/Qt sur un gros projet (> 20 personnes)
-  #- Ecriture et revue de spécifications
-  #- Tests unitaires/d'intégration
-  #- Relecture de code
-  - Suivi des performances et optimisation
-  - Collaboration inter-équipe en anglais
-  - Compréhension du besoin client
+  - Développement C++/Qt sur projet d'envergure (>20 collaborateurs).
+  - Rédaction et revue de spécifications techniques.
+  - Contribution aux pipelines CI/CD et optimisation des performances.
+  - Mise en place de tests unitaires et d'intégration.
+  - Revue de code et amélioration continue de la qualité.
+  - Collaboration avec une équipe basée en Inde (en anglais).
+  - Analyse et compréhension des besoins clients.
 
-- company: Ecoles privées/Ecoles d'ingénieur diverses
-  position: Enseignant Java, Réseau et Cybersécurité
-  timeperiod: Septembre 2021 - Mars 2023
-  description: 
-  - Dispensation de cours en amphi (promo >100 étudiants)
-  - Encadrement de TD et TP
-  - Responsable de la création des supports de cours, de TP et d'évaluations
+- company: Lyon 1 Claude Bernard, EPITA, ESGI, UCLY
+  position: Enseignant Java, Réseau et Cybersécurité & Tutorat
+  timeperiod: Septembre 2019 - Mars 2023 (3 ans 7 mois)
+  description:
+  - Etudiants de BAC+1 à BAC+4
+  - Cours de Java, réseau et cybersécurité (>100 étudiants).
+  - Conception des supports de cours, TP et évaluations.
+  - Tutorat avec l'université et en bénévolat dans une association étudiante.
 
-- company: Laboratoire LIRIS
-  position: Stage de recherche en réalité virtuelle
-  timeperiod: Mars 2021 - Août 2021
+- company: Laboratoire LIRIS, Lyon
+  position: Stage de recherche en réalité virtuelle (C# / Unity)
+  timeperiod: Mars 2021 - Août 2021 (6 mois)
   description:
   - Développement en C# d'un lecteur/enregistreur de scènes Unity adapté à la VR
   - Responsable de la planification et du déroulement d'expériences en VR
   - Synthèse et présentation d'articles scientifiques
 
-- company:
-  position: Tutorat bénévole
-  timeperiod: Septembre 2019 - Septembre 2020
-  description:
-  #- Cours et TD d'informatique à destination des Master 1 d'Informatique
-
 - company: New Generation SR, Lyon
-  position: Développeur Web Full Stack | Administrateur Système
-  timeperiod: Février 2019 - Août 2019
-  description: 
-  - Création d'images Docker
-  - Développement Web full stack sous Django
-  - Développement d'une API RESTful
-  #- Mise en place de machines virtuelles
-  #- Scripts Bash et Python    
+  position: Développeur Web Full Stack (Bash / Python / Django)
+  timeperiod: Février 2019 - Août 2019 (7 mois)
+  # description: 
+  # - Création d'images Docker
+  # - Développement Web full stack sous Python Django
+  # - Développement d'une API RESTful
+  # - Mise en place de machines virtuelles
+  # - Scripts Bash et Python    
 
 education:
 - degree: Master Image Développement et Technologie 3D
   school: Université Lyon 1 Claude Bernard
-  timeperiod: Septembre 2020 - Septembre 2021
+  timeperiod: Septembre 2016 - Septembre 2021 (5 ans)
   website: https://www.univ-lyon1.fr
 
-- degree: Master Data Science
-  school: Université Lyon 1 Claude Bernard
-  timeperiod: Septembre 2015 - Septembre 2020
-  website: https://www.univ-lyon1.fr
+# - degree: Master Data Science
+#   school: Université Lyon 1 Claude Bernard
+#   timeperiod: Septembre 2015 - Septembre 2020
+#   website: https://www.univ-lyon1.fr
 
 #- degree: Baccalauréat S (Mention BIEN avec 15.79/20)
 #  school: Lycée La Martinière Monplaisir
@@ -82,14 +87,15 @@ skills:
     list:
     - name: HTML 5
     - name: CSS 3
-    - name: Javascript
-    - name: JQuery
-    - name: Bootstrap
-    - name: Vue.js
-    - name: Java Spring
+    - name: Typescript
+    - name: React
+    - name: React Native
+    - name: Angular
+    - name: Svelte
     - name: Django
-    - name: DOM
-    - name: Extensions pour navigateur
+    - name: Express
+    - name: Extensions WEB
+    - name: Tailwind
 
   - category: DevOps/Système
     list:
@@ -97,19 +103,22 @@ skills:
     - name: Linux
     - name: Réseau
     - name: Cybersécurité
-    - name: Kubernetes
     - name: Docker
     - name: Bash
     - name: Python
+    - name: Traefik
+    - name: Crowdsec
 
   - category: Complémentaire
     list:
     - name: Git
     - name: C++
-    - name: Qt
-    - name: Optimisation
+    - name: IA Générative
     - name: Méthode Agile
-    - name: Tests unitaires
+    - name: PostgreSQL
+    - name: Prometheus
+    - name: C#
+    - name: Java
 
   # - category: Infographie
   #   list:
@@ -150,13 +159,13 @@ certifications:
   timeperiod: 2018
 
 projects:
-- name: "*Automatisation* de commandes sur boutiques en ligne"
+- name: "Extension web d'automatisation de commandes (*Svelte*)"
 
-- name: "Génération de rapports *Excel* en *Javascript*"
+- name: "Préparation de commandes (*Angular/Express/PostgreSQL*)"
 
-- name: "*Automatisation* de requêtes *SQL* lourdes en *Python*"
+- name: "Boutique en ligne (*Angular/Express/PostgreSQL*)"
 
-- name: "Envoi *automatique* de mails en *Python*"
+- name: "Extension web de reconnaissance d'image (*React*, *TensorFlow.js*, *OpenCV*)"
 
 #  timeperiod: February 2016
 #  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes and create your best CV ever! Made with Vue and LESS.
@@ -179,7 +188,7 @@ projects:
 contact:
   email: jonathan.c@bezas.fr
   phone: 06 27 96 57 71
-  street: 8A Rue Victor Huen
+  street: 8C Rue Victor Huen
   city: Colmar, 68000
   #website: www.jcabezas.fr
   github: JonathanCabezas
