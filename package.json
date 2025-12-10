@@ -11,7 +11,7 @@
   "scripts": {
     "docs": "node build/build.js",
     "docs:serve": "cd docs/ && ws --port 8080 --rewrite '/best-resume-ever/* -> /$1'",
-    "dev": "node build/dev-server.js",
+    "dev": "node --openssl-legacy-provider build/dev-server.js",
     "start": "node build/dev-server.js",
     "pdf": "node scripts/export.js",
     "preview": "node scripts/preview.js",
@@ -27,6 +27,7 @@
     "lint:fix": "eslint --ext .js,.vue src scripts --fix"
   },
   "dependencies": {
+    "@babel/runtime": "7.0.0",
     "font-awesome": "4.7.0",
     "js-yaml": "3.13.1",
     "material-design-icons": "3.0.1",
@@ -108,5 +109,6 @@
   "engines": {
     "node": ">= 18.0.0",
     "npm": ">= 6.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }
