@@ -8,7 +8,7 @@ about:
 - "Centres d'intérêt: *Echecs*, *Clarinette*, *Cuisine*, *Escalade*"
 - "*Passionné* par le développement web moderne et les bonnes pratiques"
 position: 
-- "Développeur Web Full Stack"
+- "Développeur Full Stack"
 
 birth:
   #year: 1997
@@ -21,6 +21,7 @@ experience:
   timeperiod: Décembre 2023 - Décembre 2025 (2 ans)
   description: 
   - Conception architecture (marketplace + intranet de gestion/préparation commandes).
+  - Design des interfaces utilisateurs, marketplace PWA responsive.
   - Co-rédaction du cahier des charges avec le Product Owner.
   - Développement Full Stack des deux applications.
   - IA générative pour accélérer le dev (scaffolding, tests, revue de code).
@@ -31,12 +32,11 @@ experience:
   timeperiod: Février 2022 - Juin 2023 (1 ans 5 mois)
   description: 
   - Développement C++/Qt sur projet d'envergure (>20 collaborateurs).
+  - Collaboration en anglais avec une équipe basée en Inde.
   - Rédaction et revue de spécifications techniques.
-  - Contribution aux pipelines CI/CD et optimisation des performances.
-  - Mise en place de tests unitaires et d'intégration.
   - Revue de code et amélioration continue de la qualité.
-  - Collaboration avec une équipe basée en Inde (en anglais).
-  - Analyse et compréhension des besoins clients.
+  - Mise en place de tests unitaires et d'intégration.
+  - Contribution aux pipelines CI/CD et optimisation des performances.
 
 - company: Lyon 1 Claude Bernard, EPITA, ESGI, UCLY
   position: Enseignant Java, Réseau et Cybersécurité & Tutorat
@@ -66,15 +66,15 @@ experience:
   # - Scripts Bash et Python    
 
 education:
-- degree: Master Image Développement et Technologie 3D
+- degree: Master Informatique Image Développement et Technologie 3D
   school: Université Lyon 1 Claude Bernard
-  timeperiod: Septembre 2016 - Septembre 2021 (5 ans)
+  timeperiod: Septembre 2020 - Septembre 2021 (1 an)
   website: https://www.univ-lyon1.fr
 
-# - degree: Master Data Science
-#   school: Université Lyon 1 Claude Bernard
-#   timeperiod: Septembre 2015 - Septembre 2020
-#   website: https://www.univ-lyon1.fr
+- degree: Master Informatique Data Science
+  school: Université Lyon 1 Claude Bernard
+  timeperiod: Septembre 2015 - Septembre 2020 (5 ans)
+  website: https://www.univ-lyon1.fr
 
 #- degree: Baccalauréat S (Mention BIEN avec 15.79/20)
 #  school: Lycée La Martinière Monplaisir
@@ -119,6 +119,8 @@ skills:
     - name: Prometheus
     - name: C#
     - name: Java
+    - name: OpenCV
+    - name: TensorFlow
 
   # - category: Infographie
   #   list:
@@ -159,11 +161,9 @@ certifications:
   timeperiod: 2018
 
 projects:
+- name: "Préparation de commandes et boutique en ligne (*Angular, Express, PostgreSQL*)"
+
 - name: "Extension web d'automatisation de commandes (*Svelte*)"
-
-- name: "Préparation de commandes (*Angular/Express/PostgreSQL*)"
-
-- name: "Boutique en ligne (*Angular/Express/PostgreSQL*)"
 
 - name: "Extension web de reconnaissance d'image (*React*, *TensorFlow.js*, *OpenCV*)"
 
